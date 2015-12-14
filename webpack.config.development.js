@@ -1,11 +1,11 @@
-var path = require('path');
-var webpack = require('webpack');
+import path from 'path'
+import webpack from 'webpack'
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
     'webpack-hot-middleware/client',
-    './src/index'
+    './src/client/index'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -13,12 +13,10 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
-  node: {
-    fs: "empty"
-  },
   module: {
     loaders: [{
       test: /\.json$/,
@@ -29,4 +27,4 @@ module.exports = {
       include: path.join(__dirname, 'src')
     }]
   }
-};
+}

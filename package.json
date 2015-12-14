@@ -8,50 +8,37 @@
   "scripts": {
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.production.js",
     "build": "npm run clean && npm run build:webpack",
-    "start": "node server.js",
+    "start": "node index.js",
     "test": "babel-tape-runner test/test.js"
   },
   "babel": {
-    "presets": [
-      "react",
-      "es2015"
-    ],
-    "env": {
-      "development": {
-        "plugins": [
-          [
-            "react-transform",
-            {
-              "transforms": [
-                {
-                  "transform": "react-transform-hmr",
-                  "imports": [
-                    "react"
-                  ],
-                  "locals": [
-                    "module"
-                  ]
-                },
-                {
-                  "transform": "react-transform-catch-errors",
-                  "imports": [
-                    "react",
-                    "redbox-react"
-                  ]
-                }
-              ]
-            }
-          ]
-        ]
-      }
+  "presets": ["es2015", "react"],
+  "env": {
+    "development": {
+      "plugins": [
+        ["transform-runtime"],
+        ["react-transform", {
+          "transforms": [{
+            "transform": "react-transform-hmr",
+            "imports": ["react"],
+            "locals": ["module"]
+          }]
+        }]
+      ]
     }
-  },
+  }
+},
   "dependencies": {
+    "babel-plugin-transform-runtime": "6.3.13",
+    "babel-preset-stage-0": "6.3.13",
+    "babel-register": "6.3.13",
     "immutable": "3.7.5",
+    "jade": "1.11.0",
+    "koa": "1.1.2",
+    "koa-morgan": "0.4.0",
     "r-dom": "2.1.0",
     "react": "0.14.3",
-    "react-dom": "0.14.3",
-    "react-map-gl": "file://../react-map-gl"
+    "react-dom": "0.14.3"
   },
   "devDependencies": {
     "babel-core": "6.3.17",
@@ -62,12 +49,13 @@
     "babel-tape-runner": "2.0.0",
     "express": "4.13.3",
     "json-loader": "0.5.4",
+    "koa-webpack-dev-middleware": "stepankuzmin/koa-webpack-dev-middleware",
+    "koa-webpack-hot-middleware": "1.0.1",
     "react-transform-catch-errors": "1.0.0",
     "react-transform-hmr": "1.0.1",
     "redbox-react": "1.2.0",
+    "supertest": "1.1.0",
     "tape": "4.2.2",
-    "webpack": "1.12.9",
-    "webpack-dev-middleware": "1.4.0",
-    "webpack-hot-middleware": "2.6.0"
+    "webpack": "1.12.9"
   }
 }
