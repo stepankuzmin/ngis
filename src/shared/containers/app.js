@@ -5,7 +5,7 @@ export class App extends React.Component {
     return (
       <div>
         <h1>ngis</h1>
-        <em>App container!</em>
+        <em>App container</em>
       </div>
     )
   }

@@ -8,34 +8,49 @@
   "scripts": {
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.production.js",
     "build": "npm run clean && npm run build:webpack",
-    "start": "node index.js",
+    "start": "NODE_ENV=development node index.js",
     "test": "babel-tape-runner test/test.js"
   },
   "babel": {
-  "presets": ["es2015", "react"],
-  "env": {
-    "development": {
-      "plugins": [
-        ["transform-runtime"],
-        ["react-transform", {
-          "transforms": [{
-            "transform": "react-transform-hmr",
-            "imports": ["react"],
-            "locals": ["module"]
-          }]
-        }]
-      ]
+    "presets": [
+      "es2015",
+      "react"
+    ],
+    "env": {
+      "development": {
+        "plugins": [
+          [
+            "transform-runtime"
+          ],
+          [
+            "react-transform",
+            {
+              "transforms": [
+                {
+                  "transform": "react-transform-hmr",
+                  "imports": [
+                    "react"
+                  ],
+                  "locals": [
+                    "module"
+                  ]
+                }
+              ]
+            }
+          ]
+        ]
+      }
     }
-  }
-},
+  },
   "dependencies": {
     "babel-plugin-transform-runtime": "6.3.13",
     "babel-preset-stage-0": "6.3.13",
     "babel-register": "6.3.13",
-    "immutable": "3.7.5",
+    "immutable": "3.7.6",
     "jade": "1.11.0",
     "koa": "1.1.2",
     "koa-morgan": "0.4.0",
+    "koa-webpack-dev-middleware": "1.1.0",
     "r-dom": "2.1.0",
     "react": "0.14.3",
     "react-dom": "0.14.3"
@@ -49,7 +64,6 @@
     "babel-tape-runner": "2.0.0",
     "express": "4.13.3",
     "json-loader": "0.5.4",
-    "koa-webpack-dev-middleware": "stepankuzmin/koa-webpack-dev-middleware",
     "koa-webpack-hot-middleware": "1.0.1",
     "react-transform-catch-errors": "1.0.0",
     "react-transform-hmr": "1.0.1",

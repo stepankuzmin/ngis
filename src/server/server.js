@@ -1,10 +1,12 @@
 import koa from 'koa'
 import jade from 'jade'
 import morgan from 'koa-morgan'
-import { setup } from './webpack'
+import { setupWebpack } from './webpack'
 
 var app = koa()
-setup(app) // if env == 'development'
+if (process.env.NODE_ENV == 'development') {
+  setupWebpack(app)
+}
 app.use(morgan.middleware('dev'))
 
 var template = jade.compileFile('./src/shared/index.jade')
