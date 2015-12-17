@@ -64,7 +64,7 @@
     "babel-tape-runner": "2.0.0",
     "express": "4.13.3",
     "json-loader": "0.5.4",
-    "koa-webpack-hot-middleware": "1.0.1",
+    "koa-webpack-hot-middleware": "1.0.3",
     "react-transform-catch-errors": "1.0.0",
     "react-transform-hmr": "1.0.1",
     "redbox-react": "1.2.0",
