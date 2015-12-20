@@ -49,6 +49,7 @@
     "jade": "1.11.0",
     "koa": "1.1.2",
     "koa-cors": "0.0.16",
+    "koa-favicon": "1.2.0",
     "koa-morgan": "0.4.0",
     "minimist": "1.2.0",
     "r-dom": "2.1.0",

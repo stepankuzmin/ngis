@@ -1,6 +1,6 @@
 import test from 'tape'
-import request from 'supertest-koa-agent'
 import server from '../src/server/server'
+import request from 'supertest-koa-agent'
 
 const app = server()
 

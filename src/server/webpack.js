@@ -3,7 +3,7 @@ import config from '../../webpack.config.development'
 import webpackDevMiddleware from 'koa-webpack-dev-middleware'
 import webpackHotMiddleware from 'koa-webpack-hot-middleware'
 
-export function setupWebpack (app) {
+export default function (app) {
   var compiler = webpack(config)
   app.use(webpackHotMiddleware(compiler))
 
