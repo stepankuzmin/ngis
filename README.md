@@ -5,3 +5,5 @@
 [![devDependency Status](https://david-dm.org/stepankuzmin/ngis/dev-status.svg)](https://david-dm.org/stepankuzmin/ngis#info=devDependencies)
 
 Minimalistic browser GIS
+
+Note: this is just a playground

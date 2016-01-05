@@ -5,12 +5,17 @@
   "main": "index.js",
   "author": "Stepan Kuzmin <to.stepan.kuzmin@gmail.com> (http://github.com/stepankuzmin)",
   "license": "MIT",
+  "engines": {
+    "node": ">=0.11"
+  },
   "scripts": {
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.production.js",
-    "build": "npm run clean && npm run build:webpack",
     "start": "NODE_ENV=development node index.js",
     "test": "babel-tape-runner test/test.js"
   },
+  "pre-commit": [
+    "test"
+  ],
   "babel": {
     "presets": [
       "es2015",
@@ -20,6 +25,7 @@
       "development": {
         "plugins": [
           [
+            "syntax-async-functions",
             "transform-runtime"
           ],
           [
@@ -43,7 +49,7 @@
     }
   },
   "dependencies": {
-    "babel-preset-stage-0": "6.3.13",
+    "babel-plugin-syntax-async-functions": "6.3.13",
     "babel-register": "6.3.13",
     "immutable": "3.7.6",
     "jade": "1.11.0",
@@ -68,6 +74,7 @@
     "json-loader": "0.5.4",
     "koa-webpack-dev-middleware": "1.1.0",
     "koa-webpack-hot-middleware": "1.0.3",
+    "pre-commit": "1.1.2",
     "react-transform-catch-errors": "1.0.1",
     "react-transform-hmr": "1.0.1",
     "redbox-react": "1.2.0",
