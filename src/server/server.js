@@ -6,6 +6,7 @@ import morgan from 'koa-morgan';
 import router from './router.js';
 import webpack from './webpack';
 import favicon from 'koa-favicon';
+import validate from 'koa-validate';
 import bodyParser from 'koa-bodyparser';
 
 const faviconPath = path.join(__dirname, '../shared/favicon.ico');
@@ -23,7 +24,7 @@ export default function (config = {}) {
   app.use(morgan.middleware('dev'));
   app.use(favicon(faviconPath));
   app.use(bodyParser());
-
+  app.use(validate());
   app.use(router);
 
   app.use(function* render() {
