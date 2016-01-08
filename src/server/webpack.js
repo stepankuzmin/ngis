@@ -4,7 +4,7 @@ import webpackDevMiddleware from 'koa-webpack-dev-middleware';
 import webpackHotMiddleware from 'koa-webpack-hot-middleware';
 
 export default function (app) {
-  var compiler = webpack(config);
+  const compiler = webpack(config);
   app.use(webpackHotMiddleware(compiler));
 
   app.use(webpackDevMiddleware(compiler, {

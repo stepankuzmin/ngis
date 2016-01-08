@@ -1,12 +1,31 @@
 {
   "parser": "babel-eslint",
-  "extends": "mourner",
+  "extends": "airbnb",
   "plugins": [
     "babel",
-    "react"
+    "react",
+    "import"
   ],
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "globals": {
+    "R": true,
+    "React": true,
+    "ReactDOM": true,
+    "Immutable": true,
+    "ImmutablePropTypes": true
+  },
   "rules": {
     "strict": 0,
-    "indent": [2, 2]
+    "indent": [2, 2],
+    "comma-dangle": 0,
+    "prefer-const": 0,
+    "no-multi-spaces": 0
   }
 }

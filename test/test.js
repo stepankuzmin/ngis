@@ -8,7 +8,7 @@ test('GET /', t => {
   request(app)
     .get('/')
     .expect(200)
-    .end(function (error) {
+    .end(error => {
       t.error(error, 'No errors');
       t.end();
     });

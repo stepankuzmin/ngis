@@ -1,4 +1,6 @@
 require('babel-register');
+require('babel-polyfill');
+
 var minimist = require('minimist');
 var App = require('./src/server/server');
 
