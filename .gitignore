@@ -3,4 +3,5 @@
 node_modules
 npm-debug.log
 
+db/config.js
 src/shared/config.js
