@@ -2,6 +2,7 @@
   "parser": "babel-eslint",
   "extends": "mourner",
   "plugins": [
+    "babel",
     "react"
   ],
   "rules": {
