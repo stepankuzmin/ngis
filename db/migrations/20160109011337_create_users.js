@@ -4,7 +4,8 @@ exports.up = function up(knex) {
     table.uuid('id').defaultTo(knex.raw('gen_random_uuid()'));
     table.string('email').notNullable();
     table.string('encrypted_password').notNullable();
-    table.timestamps();
+    table.timestamp('created_at').defaultTo(knex.fn.now());
+    table.timestamp('updated_at').defaultTo(knex.fn.now());
   });
 };
 
