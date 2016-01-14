@@ -56,7 +56,7 @@
   "dependencies": {
     "babel-plugin-syntax-async-functions": "6.3.13",
     "babel-polyfill": "6.3.14",
-    "babel-register": "6.3.13",
+    "babel-register": "6.4.3",
     "immutable": "3.7.6",
     "jade": "1.11.0",
     "knex": "0.9.0",
