@@ -104,6 +104,6 @@
     "redbox-react": "1.2.0",
     "supertest-koa-agent": "0.2.1",
     "tape": "4.4.0",
-    "webpack": "1.12.10"
+    "webpack": "1.12.11"
   }
 }
