@@ -1,31 +1,17 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb",
+  "extends": "airbnb-base",
   "plugins": [
     "babel",
-    "react",
     "import"
   ],
-  "ecmaFeatures": {
-    "jsx": true
-  },
   "env": {
     "es6": true,
-    "node": true,
-    "browser": true
-  },
-  "globals": {
-    "R": true,
-    "React": true,
-    "ReactDOM": true,
-    "Immutable": true,
-    "ImmutablePropTypes": true
+    "node": true
   },
   "rules": {
-    "strict": 0,
     "indent": [2, 2],
-    "comma-dangle": 0,
-    "prefer-const": 0,
-    "no-multi-spaces": 0
+    "comma-dangle": ["error", "never"],
+    "no-param-reassign": ["error", { "props": false }]
   }
 }

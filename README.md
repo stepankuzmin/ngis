@@ -1,9 +1,25 @@
 # ngis
 
-[![Build Status](https://travis-ci.org/stepankuzmin/ngis.svg)](https://travis-ci.org/stepankuzmin/ngis)
-[![Dependency Status](https://david-dm.org/stepankuzmin/ngis.svg)](https://david-dm.org/stepankuzmin/ngis)
-[![devDependency Status](https://david-dm.org/stepankuzmin/ngis/dev-status.svg)](https://david-dm.org/stepankuzmin/ngis#info=devDependencies)
+Modern browser GIS
 
-Minimalistic browser GIS
+**Note**: this is just a playground
 
-Note: this is just a playground
+## Dependencies
+
+* Node 5
+* PostgreSQL 9.5 (PostGIS, pgcrypto)
+
+## Installation
+
+```shell
+git clone https://github.com/stepankuzmin/ngis.git ngis
+cd ngis
+npm i
+cp db/config.example.js db/config.js
+createdb ngis
+npm run db:migrate
+npm run db:seed
+npm start
+```
+
+open [`http://localhost:4000`](http://localhost:4000)

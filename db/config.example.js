@@ -1,28 +1,22 @@
 module.exports = {
-
-  test: {
-    client: 'postgresql',
-    connection: {
-      database: 'ngis_test'
-    }
-  },
-
   development: {
     client: 'postgresql',
     connection: {
-      database: 'ngis_development'
+      database: 'ngis'
+    },
+    pool: {
+      min: 2,
+      max: 10
     }
   },
-
   production: {
     client: 'postgresql',
     connection: {
-      database: 'ngis_production'
+      database: 'ngis'
     },
     pool: {
       min: 2,
       max: 10
     }
   }
-
 };
