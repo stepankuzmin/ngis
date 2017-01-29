@@ -1,5 +1,7 @@
 # ngis
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/stepankuzmin/ngis.svg)](https://greenkeeper.io/)
+
 Modern browser GIS
 
 **Note**: this is just a playground
