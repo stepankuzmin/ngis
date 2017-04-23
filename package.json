@@ -62,7 +62,7 @@
     "eslint-config-airbnb-base": "11.1.1",
     "eslint-plugin-babel": "4.0.1",
     "eslint-plugin-import": "2.2.0",
-    "flow-bin": "0.41.0",
+    "flow-bin": "0.44.2",
     "pre-commit": "1.2.2",
     "supertest-koa-agent": "0.3.0",
     "tape": "4.6.3"
