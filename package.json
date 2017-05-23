@@ -48,7 +48,7 @@
     "knex": "0.12.7",
     "koa": "2.0.1",
     "koa-morgan": "1.0.1",
-    "koa-router": "7.1.0",
+    "koa-router": "7.2.0",
     "koa-static": "3.0.0",
     "minimist": "1.2.0",
     "pg": "6.1.4",
