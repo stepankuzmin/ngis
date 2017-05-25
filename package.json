@@ -55,7 +55,7 @@
     "ramda": "0.23.0"
   },
   "devDependencies": {
-    "babel-eslint": "7.1.1",
+    "babel-eslint": "7.2.0",
     "babel-plugin-transform-flow-strip-types": "6.22.0",
     "documentation": "4.0.0-rc.0",
     "eslint": "3.16.1",
